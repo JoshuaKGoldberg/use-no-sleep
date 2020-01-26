@@ -43,15 +43,17 @@
             "git add"
         ]
     },
+    "main": "./lib/index.js",
     "name": "use-no-sleep",
     "repository": {
         "type": "git",
         "url": "github:JoshuaKGoldberg/use-no-sleep"
     },
     "scripts": {
-        "format": "prettier ./*.{json,md} ./src/* --write",
+        "build": "tsc --noEmit false --outDir lib/",
+        "format": "prettier ./*.{json,md,yml} ./circleci/* ./src/* --write",
         "lint": "eslint . --ext .ts",
         "test": "jest"
     },
-    "version": "0.0.1"
+    "version": "0.2.0"
 }

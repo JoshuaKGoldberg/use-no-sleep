@@ -16,6 +16,34 @@ jobs:
         steps:
             - checkout
 
+            - attach_workspace:
+                  at: "."
+
+            - run: npm run build
+
+    format:
+        docker:
+            - image: circleci/node:latest
+
+        working_directory: ~/repo
+
+        steps:
+            - checkout
+
+            - attach_workspace:
+                  at: "."
+
+            - run: npm run format
+
+    install:
+        docker:
+            - image: circleci/node:latest
+
+        working_directory: ~/repo
+
+        steps:
+            - checkout
+
             - restore_cache:
                   keys:
                       - dependency-cache-1-{{ checksum "package-lock.json" }}
@@ -34,20 +62,6 @@ jobs:
                       - node_modules
                       - package-lock.json
                       - src
-
-    format:
-        docker:
-            - image: circleci/node:latest
-
-        working_directory: ~/repo
-
-        steps:
-            - checkout
-
-            - attach_workspace:
-                  at: "."
-
-            - run: npm run format
 
     lint:
         docker:
@@ -95,15 +109,18 @@ jobs:
 
 workflows:
     version: 2
-    build_and_verify:
+    install_and_verify:
         jobs:
+            - install
             - build
+                  requires:
+                      - install
             - format:
                   requires:
-                      - build
+                      - install
             - lint:
                   requires:
-                      - build
+                      - install
             - publish:
                   context: My Context
                   filters:
@@ -113,6 +130,7 @@ workflows:
                       - build
                       - format
                       - lint
+                      - test
             - test:
                   requires:
-                      - build
+                      - install
