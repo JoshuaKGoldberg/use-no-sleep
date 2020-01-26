@@ -64,6 +64,7 @@ jobs:
             - run: npm run lint
 
     publish:
+        context: My Context
         docker:
             - image: circleci/node:latest
 

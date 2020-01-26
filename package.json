@@ -3,7 +3,7 @@
         "nosleep.js": "https://github.com/ViRPo/NoSleep.js#f7a6122f5d6700f18a68bff2c4114b81fdf6fa55",
         "react": "16.12.0"
     },
-    "description": "Countdown timer to beep speakers out.",
+    "description": "NoSleep.js, in React Hooks form.",
     "devDependencies": {
         "@babel/core": "7.8.3",
         "@babel/preset-env": "7.8.3",
