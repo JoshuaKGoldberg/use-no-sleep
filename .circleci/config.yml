@@ -64,7 +64,6 @@ jobs:
             - run: npm run lint
 
     publish:
-        context: My Context
         docker:
             - image: circleci/node:latest
 
@@ -106,6 +105,7 @@ workflows:
                   requires:
                       - build
             - publish:
+                  context: My Context
                   filters:
                       branches:
                           only: master
