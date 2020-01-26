@@ -3,11 +3,16 @@
 .env.local
 .env.production.local
 .env.test.local
+.eslint*
 .pnp.js
+.prettier*
+*.config.js
+/.circleci
 /.pnp
+/.vscode
 /lib/*.test.*
-/src/
 /node_modules
+/src
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
