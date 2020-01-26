@@ -112,7 +112,7 @@ workflows:
     install_and_verify:
         jobs:
             - install
-            - build
+            - build:
                 requires:
                     - install
             - format:
