@@ -21,6 +21,11 @@ jobs:
 
             - run: npm run build
 
+            - persist_to_workspace:
+                  root: "."
+                  paths:
+                      - lib
+
     format:
         docker:
             - image: circleci/node:latest
@@ -113,24 +118,24 @@ workflows:
         jobs:
             - install
             - build:
-                requires:
-                    - install
+                  requires:
+                      - install
             - format:
-                requires:
-                    - install
+                  requires:
+                      - install
             - lint:
-                requires:
-                    - install
+                  requires:
+                      - install
             - publish:
-                context: My Context
-                filters:
-                    branches:
-                        only: master
-                requires:
-                    - build
-                    - format
-                    - lint
-                    - test
+                  context: My Context
+                  filters:
+                      branches:
+                          only: master
+                  requires:
+                      - build
+                      - format
+                      - lint
+                      - test
             - test:
-                requires:
-                    - install
+                  requires:
+                      - install
