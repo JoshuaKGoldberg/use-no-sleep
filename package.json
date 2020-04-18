@@ -23,7 +23,7 @@
         "eslint-plugin-react-hooks": "3.0.0",
         "husky": "4.2.5",
         "jest-cli": "25.3.0",
-        "lint-staged": "10.1.4",
+        "lint-staged": "10.1.5",
         "prettier": "1.19.1",
         "react": "16.13.1",
         "react-test-renderer": "16.13.1",
