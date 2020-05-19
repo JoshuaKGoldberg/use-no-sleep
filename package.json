@@ -27,7 +27,7 @@
         "prettier": "1.19.1",
         "react": "16.13.1",
         "react-test-renderer": "16.13.1",
-        "typescript": "3.9.2"
+        "typescript": "3.9.3"
     },
     "keywords": [
         "hook",
