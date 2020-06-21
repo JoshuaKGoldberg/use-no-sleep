@@ -17,7 +17,7 @@
         "eslint": "7.3.0",
         "eslint-config-prettier": "6.11.0",
         "eslint-config-react": "1.1.7",
-        "eslint-plugin-jest": "23.14.0",
+        "eslint-plugin-jest": "23.15.0",
         "eslint-plugin-prettier": "3.1.4",
         "eslint-plugin-react": "7.20.0",
         "eslint-plugin-react-hooks": "4.0.4",
