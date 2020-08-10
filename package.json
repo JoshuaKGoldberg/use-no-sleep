@@ -11,7 +11,7 @@
         "@testing-library/react-hooks": "3.4.1",
         "@testing-library/user-event": "12.1.1",
         "@types/jest": "26.0.9",
-        "@types/react": "16.9.45",
+        "@types/react": "16.9.46",
         "@typescript-eslint/eslint-plugin": "3.8.0",
         "@typescript-eslint/parser": "3.8.0",
         "eslint": "7.6.0",
