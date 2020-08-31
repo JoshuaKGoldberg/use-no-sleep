@@ -14,7 +14,7 @@
         "@types/react": "16.9.49",
         "@typescript-eslint/eslint-plugin": "4.0.1",
         "@typescript-eslint/parser": "4.0.1",
-        "eslint": "7.7.0",
+        "eslint": "7.8.0",
         "eslint-config-prettier": "6.11.0",
         "eslint-config-react": "1.1.7",
         "eslint-plugin-jest": "23.20.0",
