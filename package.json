@@ -4,7 +4,7 @@
     },
     "description": "NoSleep.js, in React Hooks form.",
     "devDependencies": {
-        "@babel/core": "7.12.1",
+        "@babel/core": "7.12.3",
         "@babel/preset-env": "7.12.1",
         "@babel/preset-typescript": "7.12.1",
         "@testing-library/react": "11.1.0",
